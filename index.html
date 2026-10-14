@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贴纸工坊</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 Fabric.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- 工具栏 -->
+        <div class="toolbar">
+            <button id="add-sticker-btn" title="上传图片作为贴纸">🖼️ 上传贴纸</button>
+            <button id="add-bg-btn" title="上传图片作为背景">🌄 上传背景</button>
+            <button id="draw-btn" title="开启/关闭绘画模式">✏️ 画笔</button>
+            <button id="outline-btn" title="为选中的贴纸添加白色描边">✨ 一键描边</button>
+            <button id="delete-btn" title="删除选中对象">🗑️ 删除</button>
+            <input type="file" id="sticker-input" accept="image/png,image/jpeg,image/webp" hidden>
+            <input type="file" id="bg-input" accept="image/png,image/jpeg,image/webp" hidden>
+        </div>
+
+        <!-- 画布容器 -->
+        <div class="canvas-wrapper">
+            <canvas id="c" width="800" height="600"></canvas>
+        </div>
+
+        <p class="tip">提示：点击画布空白处取消选中，拖动贴纸即可移动。</p >
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
